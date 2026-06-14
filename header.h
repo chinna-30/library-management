@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<unistd.h>
+#include<time.h>
 struct st
 {
 	int bid;
@@ -22,6 +24,19 @@ struct isu
 	struct isu *next;
 };
 
-extern int id,sid;
+extern int id,sid,isid;
+extern int search_id;
 void add_nbook(struct st **);
 void view_all(struct st *);
+void load(struct st **);
+void terminate(struct st *);
+void save(struct st *);
+void display(struct st *);
+void bremove(struct st **);
+void del_id(struct st **);
+void update(struct st *);
+void issue(struct st *,struct isu **);
+void issue_list(struct isu *);
+void issue_save(struct isu *);
+void issue_load(struct isu **);
+void return_book(struct st *,struct isu **);

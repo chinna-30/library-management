@@ -1,11 +1,12 @@
 #include"header.h"
 
-
+int search_id=0;
 int verify(void);
 void id_update(struct st *hptr,struct isu *ishptr);
 
 int id=0;
 int sid=0;
+int isid=1;
 int main()
 {
 
@@ -14,8 +15,8 @@ int main()
 	int op,n;
 	char ch,w;
 	//printf("sizeof(struct st) = %lu\n", sizeof(struct st));
-	//load(&hptr);
-	//isload(&ishptr);
+	load(&hptr);
+	issue_load(&ishptr);
 	id_update(hptr,ishptr);
 	
 	while(1){
@@ -62,52 +63,53 @@ int main()
 			}
 				system("clear");
 				break;
-	/*	case 2: update_book();
-		        printf("\nTHIS PARTICULAR STUDENT DETAIL IS DELETED\n");
+		case 2: update(hptr);
 			sleep(2);
 			system("clear");
 			break;
-		case 3: remove_book(&hptr);                 
+		case 3: bremove(&hptr);                 
 			while(getchar() != '\n'); 
                         getchar();                 
                         system("clear");
 			break;
-		case 4: search_book(hptr);
+		case 4:  printf("\n");
+			 printf("\t\t+----------------------------+\n");
+			 printf("\t\t|        SEARCH BOOK         |\n");
+    		       	display(hptr);
 			while(getchar() != '\n'); 
                         getchar();                 
 			system("clear");
-			break;*/ 
+			break; 
 		case 5: printf("\nLIST OF AVAILABLE BOOKS IN THE LIBRARAY\n");
 			view_all(hptr);
 			while(getchar() != '\n'); 
                         getchar();                 
 			system("clear");
 			break; 
-		/*case 6: issue_book(hptr,&ishptr);
-			printf("\nDONT FORGET THAT DUE DATE\n");
+		case 6:issue(hptr,&ishptr);
 			while(getchar() != '\n'); 
                         getchar();                 
 			system("clear");
 			break;
-		case 7: ret_book(hptr,ishptr);
+		case 7: return_book(hptr,&ishptr);
 			while(getchar() != '\n'); 
                         getchar();                 
 			system("clear");
 			break;
-		case 8: list_iss(ishptr);
+		case 8: issue_list(ishptr);
 			while(getchar() != '\n'); 
                         getchar();                 
 			system("clear");
 			break;
-        	case 9: save(hptr);
-			printf("\nALL BOOK DETAILS ARE SAVED IN THE FILE lmsbook.txt \n");
-			iss_save(ishptr);
+        	case 9:save(hptr);
+			printf("\nALL BOOK DETAILS ARE SAVED IN THE FILE book.txt \n");
+			issue_save(ishptr);
 			while(getchar() != '\n'); 
                         getchar();                 
 			system("clear");
 			break;
-	      case 10:  exit_lib(hptr);
-			return 0;*/
+	      case 10:  terminate(hptr);
+			return 0;
 	}
 	}
 }

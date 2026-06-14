@@ -19,7 +19,8 @@ void add_nbook(struct st **ptr)
 	else
 	{
 	    struct st *last=*ptr;
-	    while(last->next!=0);
+	    while(last->next!=0)
+		    last=last->next;
 	    last->next=temp;
 
 	}

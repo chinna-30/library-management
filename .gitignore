@@ -4,6 +4,9 @@
 # Allow C source files
 !*.c
 
+# Allow C source files
+!*.txt
+
 # Allow header files
 !*.h
 
