@@ -3,8 +3,11 @@
 		+---------------+------------------------------+------------------------------+---------------+
 		|    BOOK ID    |           BOOK NAME          |         AUTHOR NAME          | BOOK QUANTITY |
 		+---------------+------------------------------+------------------------------+---------------+
-		| 214369        | jaihind                      | subhash                      | 33            |
-		| 214370        | sss                          | rrr                          | 44            |
-		| 214371        | ggg                          | hhh                          | 67            |
-		| 214372        | bbb                          | nnn                          | 67            |
+		| 214369        | jaihind                      | SUBASH                       | 20            |
+		| 214373        | wings of fire                | A.P.J.Abdulkalam             | 50            |
+		| 214374        | The Alchemist                | Paulo Coelho                 | 60            |
+		| 214375        | Rich dad Poor dad            | Robert Kiyosaki              | 70            |
+		| 214376        | The Guide                    | R.K.Narayanan                | 80            |
+		| 214377        | Atomic Habits                | James clear                  | 90            |
+		| 214378        | lic                          | author                       | 56            |
 		+---------------+------------------------------+------------------------------+---------------+

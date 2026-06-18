@@ -7,6 +7,7 @@ void id_update(struct st *hptr,struct isu *ishptr);
 int id=0;
 int sid=0;
 int isid=1;
+int flag=0;
 int main()
 {
 
@@ -63,11 +64,15 @@ int main()
 			}
 				system("clear");
 				break;
-		case 2: update(hptr);
+		case 2: n=verify();
+			if(n){	
+			update(hptr);}
 			sleep(2);
 			system("clear");
 			break;
-		case 3: bremove(&hptr);                 
+		case 3: n=verify();
+			if(n){
+			bremove(&hptr);}                 
 			while(getchar() != '\n'); 
                         getchar();                 
                         system("clear");
@@ -108,7 +113,7 @@ int main()
                         getchar();                 
 			system("clear");
 			break;
-	      case 10:  terminate(hptr);
+	      case 10:  terminate(hptr,ishptr);
 			return 0;
 	}
 	}

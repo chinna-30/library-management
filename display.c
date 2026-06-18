@@ -36,7 +36,7 @@ void display(struct st *ptr)
             search_id=print_books(ptr,3,name);
             break;
         default:
-            printf("\nINVALID OPTION\n");return;
+            printf("\nINVALID OPTION\n");return ;
     }
     return;
 }
@@ -64,11 +64,13 @@ if(ptr==NULL){
 		{
     	    	printf("\t\t| %-13d | %-28s | %-28s | %-13d |\n",ptr->bid,ptr->bname,ptr->aname,ptr->qty);
 	       	printf("\t\t+---------------+------------------------------+------------------------------+---------------+\n");
-        	return ptr->bid;
+        	flag=1;
+		return ptr->bid;
 		break;
 		}
 		else
     	    	ptr = ptr->next;
+
     	}
 
 

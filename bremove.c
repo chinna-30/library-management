@@ -6,6 +6,8 @@ void bremove(struct st **ptr)
 	printf("\t\t+----------------------------+\n");
         printf("\t\t|        REMOVE BOOK         |\n");
 	display(*ptr);
+	if(flag){
+		flag=0;
 	printf("\nDELETE THIS BOOK (Y/N) : ");
         scanf(" %c",&op1);
  	if((op1|32)!='y')
@@ -15,6 +17,7 @@ void bremove(struct st **ptr)
         }
 	else
 		del_id(ptr);
+	}
 	
 	      
 

@@ -24,12 +24,12 @@ struct isu
 	struct isu *next;
 };
 
-extern int id,sid,isid;
+extern int id,sid,isid,flag;
 extern int search_id;
 void add_nbook(struct st **);
 void view_all(struct st *);
 void load(struct st **);
-void terminate(struct st *);
+void terminate(struct st *,struct isu*);
 void save(struct st *);
 void display(struct st *);
 void bremove(struct st **);

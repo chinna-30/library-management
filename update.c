@@ -3,6 +3,7 @@ void update(struct st *ptr)
 {
 	char op;
 	display(ptr);
+	if(flag){
  	struct st *temp=ptr;
         while(temp!=0)
         {
@@ -16,6 +17,7 @@ void update(struct st *ptr)
         printf("|      1.Book ID                      |\n");
         printf("+      2.Book Name                    +\n");
         printf("|      3.Author Name                  |\n");
+        printf("|      4.Book Quantity                |\n");
         printf("+-------------------------------------+\n");
 	printf("Enter your choice: ");
         scanf("%d",&x);
@@ -33,6 +35,10 @@ void update(struct st *ptr)
                         printf("Enter Aothor Name: ");
                         scanf("%s",temp->aname);
 			break;
+                case 4:
+			printf("Enter Book qty: ");
+			scanf("%d",&temp->qty);
+			break;
                 default:printf("Invalid choice\n");return;
         }
 	puts("Record updated Successfully");
@@ -47,7 +53,7 @@ void update(struct st *ptr)
         temp=temp->next;
         
 	}
-
+	}
 }
 
 

@@ -10,6 +10,8 @@ void issue_load(struct isu **ptr)
 	while(fscanf(fp,"%d|%d|%d|%[^|]|%[^|]|%[^|]|%[^|]|%d\n",&temp.isid,&temp.bid,&temp.uid,temp.uname,
 				 temp.isu_date,temp.due_date,temp.ret_date,&temp.fine) == 8)
 	{
+		if(temp.isid>=isid)
+			isid=temp.isid+1;
 		struct isu *data;
 		data=(struct isu *)malloc(sizeof(struct isu));
 		*data=temp;

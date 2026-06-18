@@ -1,5 +1,5 @@
 #include"header.h"
-void terminate(struct st *ptr)
+void terminate(struct st *ptr,struct isu *ptr1)
 {
 	char op;
         printf("+-------------------------------------+\n");
@@ -13,7 +13,8 @@ void terminate(struct st *ptr)
         
 	switch(op|32)
         {
-                case 's':save(ptr);return;
+                case 's':save(ptr);
+			issue_save(ptr1); return;
                 case 'e':puts("Exit without saving the student Record\n");return;
                 default:printf("Invalid choice\n");return;
         }

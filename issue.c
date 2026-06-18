@@ -1,4 +1,5 @@
 #include"header.h"
+
 void issue(struct st *lbk,struct isu **isuptr)
 {
 	struct st *btemp=lbk;
@@ -9,6 +10,7 @@ void issue(struct st *lbk,struct isu **isuptr)
 
 	display(btemp);
 
+	if(flag){
 	char op;
 	printf("Do you want this book(y/n): ");
 	scanf(" %c",&op);
@@ -75,7 +77,7 @@ void issue(struct st *lbk,struct isu **isuptr)
         sizeof(itemp->isu_date),"%d-%m-%Y",ptr);
 
     /* Due Date = Issue Date + 10 Days */
-    	t += 10 * 24 * 60 * 60;
+    	t += 1 * 24 * 60 * 60;
 
     	ptr = localtime(&t);
 
@@ -104,4 +106,5 @@ void issue(struct st *lbk,struct isu **isuptr)
    }
    else
 	   puts("Thank you for visiting");
+	}
 }

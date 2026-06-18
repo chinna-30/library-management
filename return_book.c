@@ -76,12 +76,12 @@ printf("+================================+\n");
 printf("| Book Returned Successfully     |\n");
 printf("+================================+\n");
     /* Remove from issue list */
-    if(prev == NULL)
+   /* if(prev == NULL)
         *ptr2 = temp->next;
     else
         prev->next = temp->next;
 
-    free(temp);
+    free(temp);*/
 
     printf("Book Returned Successfully\n");
 }
